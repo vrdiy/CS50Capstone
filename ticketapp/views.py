@@ -30,7 +30,9 @@ from datetime import datetime, timedelta, timezone
 
 
 def home(request):
+    
     movieObjs = Movie.objects.all()
+    
     createShowings()
     #need static path for p5 sketch:
     fontpath = static('/ticketapp/MovieBill-M86w.ttf')

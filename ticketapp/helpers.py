@@ -25,11 +25,11 @@ def createShowings():
     today = datetime.now()
     #tz = timezone(timedelta(hours=-5),'est')
     #weekfromtoday = today + timedelta(days=7)
-
+    
     movies = Movie.objects.all()
     for movie in movies:
         showings = movie.showings.all()
-       # Showing(movie=movie,time=date_)
+    # Showing(movie=movie,time=date_)
         for day in range(8):
             i = today + timedelta(days=day)
             showingsOnThisDay = []
@@ -40,6 +40,7 @@ def createShowings():
                 randomTime = datetime(i.year,i.month,i.day,6*(x+1),30 if random()>0.5 else 0,0,0,tzinfo=timezoneEST())
                 newShowing_ = Showing(time=randomTime,movie=movie)
                 newShowing_.save()
+    
     return
 
 
