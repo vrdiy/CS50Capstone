@@ -1,2 +1,5 @@
 .venv
 .vscode
+data/
+ticketapp/migrations/
+ticketproj/__pycache__/
