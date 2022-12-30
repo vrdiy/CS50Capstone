@@ -57,6 +57,8 @@ To spin up a given configuration use the following pattern:
 
 `docker-compose -f docker-compose.BUILDOFCHOICE.yml up -d --build`
 
+make migrations:
+`docker-compose -f docker-compose.BUILDOFCHOICE.yml exec WEBAPPSERVICE python manage.py makemigrations APPNAME`
 Create tables:
 `docker-compose -f docker-compose.BUILDOFCHOICE.yml exec WEBAPPSERVICE python manage.py migrate --noinput --run-syncdb`
 
